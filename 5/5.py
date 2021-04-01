@@ -5,5 +5,3 @@ def func(x0, v0, t):
 
 x0, v0, t = map(float, input().split())
 print(func(x0, v0, t))
-
-#arr = [int(i) for i in input().split()]
