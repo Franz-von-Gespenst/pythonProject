@@ -1,3 +1,13 @@
-from itertools import combinations
-L = [1, 2, 3, 4]
-print([",".join(map(str, comb)) for comb in combinations(L, 3)])
+import itertools
+
+count = int(input())
+str = input()
+
+for i in itertools.product(str, repeat=count):
+    res = "".join(i)
+    isContains = True
+    for j in str:
+        if not res.__contains__(j):
+            isContains = False
+    if isContains:
+        print(res, end=" ")
