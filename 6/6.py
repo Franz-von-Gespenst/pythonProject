@@ -6,8 +6,12 @@ a = float(input("a = "))
 b = float(input("b = "))
 c = float(input("c = "))
 
+if a == 0:
+    x = -c / b
+    print("x =", x)
+    exit(0)
+
 discr = b ** 2 - 4 * a * c
-print("Дискриминант D = %.2f" % discr)
 
 if discr > 0:
     x1 = (-b + math.sqrt(discr)) / (2 * a)

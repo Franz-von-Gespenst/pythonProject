@@ -8,8 +8,7 @@ def func(l1, s, l, r1, l2, r2):
     elif l + l2 < s:
         if l == r1:
             func(l1, s, l1, r1, l2 + 1, r2)
-        templ = l + 1
-        func(l1, s, templ, r1, l2, r2)
+        func(l1, s, l + 1, r1, l2, r2)
     elif l + l2 > s:
         print("-1")
         exit(0)

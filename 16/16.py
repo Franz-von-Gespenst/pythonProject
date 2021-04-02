@@ -1,8 +1,8 @@
 count = int(input())
-arr = [str(i) for i in input().split()]
+arr = [i for i in input().split()]
 if count != len(arr):
     exit(-1)
-wasFound = True
+wasFound = False
 for i in range(0, len(arr)):
     l = list(arr[i])
     if l[0] == "a":
@@ -11,8 +11,8 @@ for i in range(0, len(arr)):
                 if l[6] == "6":
                     if l[7] == "6":
                         if l[8] == "1":
-                            wasFound = False
+                            wasFound = True
                             print(arr[i])
 
-if wasFound:
+if not wasFound:
     print("-1")
