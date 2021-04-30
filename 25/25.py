@@ -38,6 +38,7 @@ def bozoSort(a: list, bool=True):
 @multimethod
 def bozoSort(a: dict, bool=True):
     a = bozoSort([l for b in a[""] for l in b], bool)
+    print(a)
     list = []
     for i in range(0, len(a), int(sqrt(len(a)))):
         tempList = []
