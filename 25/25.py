@@ -48,9 +48,9 @@ def bozoSort(a: dict, bool=True):
 
 
 arr = read()
-if len(arr) == 3:
+try:
     print(bozoSort(arr[0], arr[1], arr[2]))
     print(bozoSort(arr[0], arr[1], arr[2], False))
-    exit()
+except(IndexError): {}
 print(bozoSort(arr))
 print(bozoSort(arr, False))
