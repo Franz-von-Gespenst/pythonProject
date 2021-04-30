@@ -52,5 +52,6 @@ try:
     print(bozoSort(arr[0], arr[1], arr[2]))
     print(bozoSort(arr[0], arr[1], arr[2], False))
 except(IndexError): {}
+except(KeyError): {}
 print(bozoSort(arr))
 print(bozoSort(arr, False))
