@@ -22,9 +22,6 @@ for i in list:
 stopWord = input()
 res = 1
 for i in range(0, len(stopWord)):
-    if dict.__contains__(stopWord[i]):
-        res *= dict[stopWord[i]]
-    else:
-        res = 0
+    res *= dict[stopWord[i]] if dict.__contains__(stopWord[i]) else 0
 
 print(res)

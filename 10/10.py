@@ -14,5 +14,5 @@ def func(l1, s, l, r1, l2, r2):
         exit(0)
 
 
-s, l1, r1, l2, r2 = map(int, input().split())
+s, l1, r1, l2, r2 = map(int, input("s, l1, r1, l2, r2 ").split())
 func(l2, s, l2, r2, l1, r1)

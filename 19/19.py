@@ -1,7 +1,7 @@
 import itertools
 
-count = int(input())
-str = input()
+count = int(input("count = "))
+str = input("str = ")
 
 for i in itertools.product(str, repeat=count):
     res = "".join(i)

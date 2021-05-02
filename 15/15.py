@@ -15,7 +15,7 @@ while k:
     num = random.randint(0, 100)
     lose = True
     for i in range(0, 5):
-        a = int(input("число="))
+        a = int(input("число = "))
         if a > num:
             if i != 4:
                 print("Загаданное число меньше")
@@ -28,5 +28,5 @@ while k:
             lose = False
             break
     if lose:
-        print("Вы проиграли. Было загадано:", num)
+        print("Вы проиграли. Было загадано: ", num)
         k = func()

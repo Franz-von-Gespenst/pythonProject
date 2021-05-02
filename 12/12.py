@@ -1,4 +1,4 @@
-a = int(input("число="))
+a = int(input("число = "))
 tempa = a
 while tempa > 1:
     tempa = tempa - 1

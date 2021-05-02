@@ -5,9 +5,9 @@ def func(arr):
     arr = collections.Counter(arr).most_common()
     tempArr = []
     itemMax = arr[0][1]
-    for i in arr:
-        if i[1] > itemMax:
-            itemMax = i[1]
+    for item in arr:
+        if item[1] > itemMax:
+            itemMax = item[1]
     for item in arr:
         if item[1] == itemMax:
             tempArr.append(item[0])
@@ -20,7 +20,7 @@ arrBlack = [2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35]
 red = 0
 black = 0
 while True:
-    n = int(input())
+    n = int(input("n = "))
     if n < 0 or n > 36:
         exit(0)
     if len(arr) > 12:

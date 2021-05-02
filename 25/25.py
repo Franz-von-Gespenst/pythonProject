@@ -4,14 +4,14 @@ from multimethod import multimethod
 
 
 def read():
-    count = int(input())
-    temp = [int(i) for i in input().split()]
-    if count == len(temp):
-        return temp
-    a = [[int(j) for j in input().split()] for i in range(int(sqrt(count) - 1))]
-    a.append(temp)
+    count = int(input("количество чисел требующий сортировки: "))
+    firstLine = [int(i) for i in input().split()]
+    if count == len(firstLine):
+        return firstLine
+    restOfLines = [[int(j) for j in input().split()] for i in range(int(sqrt(count) - 1))]
+    restOfLines.append(firstLine)
     d = dict()
-    d[""] = a
+    d[""] = restOfLines
     return d
 
 
@@ -28,8 +28,8 @@ def bozoSort(a: list, bool=True):
         index2 = int(random() * len(a))
         a[index1], a[index2] = a[index2], a[index1]
         isSorted = True
-        for i in range(1, len(a)) if bool else range(len(a) - 1, 0):
-            if a[i - 1] > a[i]:
+        for i in range(1, len(a)):
+            if (a[i - 1] > a[i]) if bool else (a[i - 1] < a[i]):
                 isSorted = False
                 break
     return a
@@ -52,7 +52,7 @@ arr = read()
 try:
     print(bozoSort(arr[0], arr[1], arr[2]))
     print(bozoSort(arr[0], arr[1], arr[2], False))
-except(IndexError): {}
-except(KeyError): {}
+except IndexError: {}
+except KeyError: {}
 print(bozoSort(arr))
 print(bozoSort(arr, False))

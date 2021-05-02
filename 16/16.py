@@ -1,4 +1,4 @@
-count = int(input())
+count = int(input("count = "))
 arr = [i for i in input().split()]
 if count != len(arr):
     exit(-1)

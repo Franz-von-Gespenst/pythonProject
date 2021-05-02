@@ -1,4 +1,4 @@
-a, s, b = map(str, input().split())
+a, s, b = map(str, input("a, symbol, b ").split())
 
 try:
     a = float(a)
